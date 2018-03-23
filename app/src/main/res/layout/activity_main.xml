@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/basketball"
+    tools:context=".MainActivity">
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@drawable/Basketball" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF6F00"
+        android:text="Team Alpha "
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team Beta"
+            android:textStyle="bold"
+            android:textColor="#FF6F00"
+            android:textSize="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/alphaTV"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center"
+            android:textColor="#FF6F00"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            />
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/betaTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center"
+            android:textColor="#FF6F00"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginRight="30dp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+        <!-- this is for points -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <Button
+                    android:id="@+id/alpha3Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:text="+3 Points"
+                    android:textColor="#FF6F00"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:background="#3E2723"
+                    android:layout_gravity="center"
+                    android:padding="12dp"
+                    android:onClick="onClick"/>
+
+                <Button
+                    android:id="@+id/beta3Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:text="+3 Points"
+                    android:textColor="#FF6F00"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:background="#3E2723"
+                    android:layout_gravity="center"
+                    android:padding="12dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center">
+                <Button
+                    android:id="@+id/alpha2Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:text="+2 Points"
+                    android:textColor="#FF6F00"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:background="#3E2723"
+                    android:layout_gravity="center"
+                    android:padding="12dp"/>
+
+
+                <Button
+                    android:id="@+id/beta2Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:text="+2 Points"
+                    android:textColor="#FF6F00"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:background="#3E2723"
+                    android:layout_gravity="center"
+                    android:padding="12dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+                <Button
+                    android:id="@+id/alpha1Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:text="FREE THROW"
+                    android:textColor="#FF6F00"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:background="#3E2723"
+                    android:layout_gravity="center"
+                    android:padding="12dp"/>
+
+
+                <Button
+                    android:id="@+id/beta1Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="40dp"
+                    android:background="#3E2723"
+                    android:padding="12dp"
+                    android:text="FREE THROW"
+                    android:textColor="#FF6F00"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_zoom"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:text="24"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:text="RESET Game"
+            android:textColor="#FF6F00"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+
+</LinearLayout>
